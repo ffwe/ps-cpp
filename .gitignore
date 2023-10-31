@@ -1,3 +1,10 @@
+# Ignore all files and directories starting with . except .gitignore
+.*
+!.gitignore
+
+#etc
+*.bin
+
 # Prerequisites
 *.d
 
