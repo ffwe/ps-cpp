@@ -17,15 +17,15 @@ else
 fi
 
 # Compile the source file using g++
-g++ "${filename}" -o "${name}.bin"
+g++ "${filename}" -o "${name}.exe"
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     # Run the compiled executable with input from the .in file (if exists)
     if [ -z "$input" ]; then
-        ./"${name}.bin"
+        ./"${name}.exe"
     else
-        echo -e "$input" | ./"${name}.bin"
+        echo -e "$input" | ./"${name}.exe"
     fi
 else
     echo "Compilation failed."
